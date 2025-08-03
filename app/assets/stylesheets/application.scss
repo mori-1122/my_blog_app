@@ -1,6 +1,6 @@
+@use 'variables';
 @use 'header';
 @use 'tabs';
-@use 'variables';
 @use 'card';
 
 html {
@@ -22,9 +22,9 @@ html {
 
 body {
   height: 100%;
-  background-color: $base-bg-color;
+  background-color: variables.$base-bg-color;
   font-size: 1em;
-  color: $text-base-color;
+  color: variables.$text-base-color;
 }
 
 .container {

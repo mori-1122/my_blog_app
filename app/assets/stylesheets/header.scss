@@ -6,14 +6,14 @@ $header-padding-y: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
   padding: $header-padding-y 16px;
   font-weight: bold;
 
   &_pageTitle {
     color: white;
     line-height: $avatar-size;
-    font-size: $font-lg;
+    font-size: variables.$font-lg;
   }
 
   &_avatar {
@@ -47,7 +47,7 @@ $header-padding-y: 16px;
   padding: 8px 16px;
   text-decoration: none;
   display: block;
-  color: $text-base-color;
+  color: variables.$text-base-color;
 }
 
 .dropdown-content a:hover {
