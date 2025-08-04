@@ -23,7 +23,16 @@
   </head>
 
   <body>
-    <p>共通化</p>
+    <header class="header">
+      <p class="header_pageTitle">新着記事</p>
+      <div class="dropdown">
+        <%= image_tag 'default-avatar.png', class: 'header_avatar dropdown' %>
+        <div class="dropdown-content">
+          <a href="#">プロフィール</a>
+          <a href="#">ログアウト</a>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
