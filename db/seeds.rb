@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Article.create({ title: "テスト記事", content: "accumsan orci non nunc varius placerat. Quisque et dolor venenatis, pretium mi at, vehicula libero. Vestibulum vel ultricies odio. Cras" } )
+Article.create({ title: "ダミー記事", content: "Pellentesque sed lectus non augue vulputate elementum. Sed tempor malesuada nisl id interdum. Nam malesuada eget massa sed ullamcorper." } )
