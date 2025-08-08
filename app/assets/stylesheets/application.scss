@@ -5,6 +5,8 @@
 @use 'article';
 @use 'buttons';
 @use 'form';
+@use 'common';
+@use 'flash';
 
 html {
   word-spacing: 1px;

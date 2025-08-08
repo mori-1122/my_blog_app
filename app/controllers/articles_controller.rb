@@ -14,9 +14,24 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params) # 保存する箱みたいなものを作成
     if @article.save # 保存する
-      redirect_to article_path(@article) # リダイレクトされる
+      redirect_to article_path(@article), notice: "保存完了" # リダイレクトされる
     else
+      flash.now[:error] = "保存失敗"
       render :new, status: :unprocessable_entity# 保存されなかったらnewに行く
+    end
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: "更新できました"
+    else
+      flash.now[:error] = "更新できませんでした"
+      render :edit, status: :unprocessable_entity
     end
   end
 
