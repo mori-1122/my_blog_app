@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update]
+  before_action :set_article, only: [ :show, :edit, :update ]
 
   def index
     @articles = Article.all # 複数ある投稿記事の一覧を表示する
