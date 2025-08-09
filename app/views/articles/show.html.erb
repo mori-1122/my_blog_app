@@ -4,14 +4,14 @@
     <%= image_tag 'default-avatar.png' %>
     <div>
       <p>chiba</p>
-      <p>2025/8/16</p>
+      <p><%= @article.display_created_at %></p>
     </div>
     <div class="article_detail_actions">
       <div class="dropdown">
         <%= image_tag 'actions.svg', class: 'dropbtn' %>
         <div class="dropdown-content mini">
           <%= link_to "編集する", edit_article_path(@article) %> <%#  記事のIDを含めるために@article  %>
-          <%= link_to "削除する", article_path(@article), data: { turbo_method: 'delete', turbo_confirm: '本当に削除してもよろしいですか？' }%>
+          <%= link_to "削除する", article_path(@article), data: { turbo_method: 'delete', turbo_confirm: '本当に削除してもよろしいですか？' } %>
         </div>
       </div>
     </div>
